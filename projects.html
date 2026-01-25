@@ -1,47 +1,244 @@
 <!doctype html>
 <html lang="nl">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Projecten | Jouw Naam</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projecten - Lithe Jnaid</title>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script defer src="app.js"></script>
-</head>
+    <!-- Tailwind via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-<body class="bg-white text-black">
-  <!-- Header -->
-  <header class="border-b">
-    <nav class="mx-auto max-w-5xl px-4 py-4 flex justify-between items-center">
-      <a href="index.html" class="font-bold text-lg text-black">
-        Jouw Naam
-      </a>
+    <!-- Poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
-      <div class="flex gap-4">
-        <a href="index.html" class="text-black/70 hover:text-blue-600">Home</a>
-        <a href="projects.html" class="text-blue-600 font-medium">Projecten</a>
+    <!-- JS -->
+    <script defer src="./app.js"></script>
+  </head>
+
+  <body class="bg-white text-gray-900 [font-family:Poppins,system-ui,sans-serif]">
+    <!-- Desktop NAV -->
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 hidden lg:flex items-center justify-between px-8 h-20 bg-white border-b border-gray-200"
+    >
+      <div class="text-2xl font-semibold">Lithe Jnaid</div>
+      <ul class="flex gap-8 text-lg">
+        <li>
+          <a class="hover:underline underline-offset-8 hover:text-gray-500" href="index.html#profile">
+            Profiel
+          </a>
+        </li>
+        <li>
+          <a class="hover:underline underline-offset-8 hover:text-gray-500" href="projects.html">
+            Projecten
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Mobile NAV -->
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 flex lg:hidden items-center justify-between px-6 h-20 bg-white border-b border-gray-200"
+    >
+      <div class="text-2xl font-semibold">Lithe Jnaid</div>
+
+      <div class="relative">
+        <button
+          type="button"
+          class="flex flex-col justify-between w-8 h-6"
+          onclick="toggleMenu()"
+          aria-label="Open menu"
+          aria-expanded="false"
+          id="menuButton"
+        >
+          <span class="h-0.5 w-full bg-black"></span>
+          <span class="h-0.5 w-full bg-black"></span>
+          <span class="h-0.5 w-full bg-black"></span>
+        </button>
+
+        <ul
+          id="mobileMenu"
+          class="hidden absolute right-0 mt-3 w-56 bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm"
+        >
+          <li>
+            <a class="block px-5 py-3 text-lg hover:bg-gray-50" href="index.html#profile" onclick="toggleMenu()">
+              Profiel
+            </a>
+          </li>
+          <li>
+            <a class="block px-5 py-3 text-lg hover:bg-gray-50" href="projects.html" onclick="toggleMenu()">
+              Projecten
+            </a>
+          </li>
+        </ul>
       </div>
     </nav>
-  </header>
 
-  <!-- Content -->
-  <main class="mx-auto max-w-5xl px-4 py-10">
-    <h1 class="text-3xl font-bold">Projecten</h1>
-    <p class="mt-3 text-black/70">
-      Hier komen straks jouw projecten (Valk Welding, DIVD Academy, schoolprojecten).
-    </p>
+    <!-- PROJECTEN -->
+    <section class="pt-28 lg:pt-32 py-16">
+      <div class="max-w-6xl mx-auto px-6">
+        <h1 class="text-4xl font-bold text-center">Mijn Projecten</h1>
+        <p class="mt-4 text-gray-600 text-center">
+          Een selectie van projecten uit mijn opleiding en praktijkervaring.
+        </p>
 
-    <div class="mt-8 grid gap-4 md:grid-cols-2">
-      <div class="border rounded-xl p-5">
-        <h2 class="font-semibold">Valk Welding – Robotarm + AI vision</h2>
-        <p class="mt-2 text-black/70 text-sm">Korte omschrijving komt later.</p>
+        <div class="mt-12 grid gap-10">
+
+          <!-- PROJECT 1: VALK WELDING -->
+          <div class="border border-gray-200 rounded-3xl p-6 bg-white">
+            <h2 class="text-2xl font-semibold">Valk Welding — Robotarm & AI-vision</h2>
+
+            <p class="mt-3 text-gray-700">
+              Tijdens dit project werkte ik zes maanden met mijn team aan het ontwikkelen van een AI-gestuurd systeem
+              waarmee een industriële lascobot ovale lasgaten automatisch herkent en zich nauwkeurig positioneert
+              voor het lasproces.
+            </p>
+
+            <ul class="mt-4 list-disc list-inside text-gray-700 space-y-1">
+              <li>Rol: Scrum-master en software developer</li>
+              <li>Ontwikkeling in TM Flow</li>
+              <li>Objectherkenning met camera en AI</li>
+              <li>Testen en documentatie</li>
+            </ul>
+
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">TM Flow</span>
+              <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">AI / Vision</span>
+              <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Scrum</span>
+              <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Robotica</span>
+            </div>
+
+            <p class="mt-4 text-gray-600 text-sm">
+              Vanwege bedrijfsinformatie kan ik geen broncode delen, maar hieronder is een visuele demonstratie te zien.
+            </p>
+
+            <!-- Video of afbeelding -->
+            <div class="mt-6 flex items-center gap-4">
+              <img
+                src="./assets/robot-arm.png"
+                alt="Valk Welding project"
+                class="h-12 w-12 rounded-lg border border-gray-200"
+              />
+            
+              <a
+                href="https://drive.google.com/drive/folders/1lIDDiMl_19pjvicNsszPuleCWm3oyDJ2?hl=nl"
+                target="_blank"
+                rel="noopener"
+                class="text-gray-900 font-semibold hover:underline hover:text-gray-600"
+              >
+                Bekijk projectmateriaal (Google Drive)
+              </a>
+            </div>
+            <!-- Trello board -->
+            <div class="flex items-center gap-4">
+              <img
+                src="./assets/trello.png"
+                alt="Trello bord"
+                class="h-12 w-12 rounded-lg border border-gray-200"
+              />
+              <a
+                href="https://trello.com/b/jUyJywJZ"
+                target="_blank"
+                rel="noopener"
+                class="text-gray-900 font-semibold hover:underline hover:text-gray-600"
+              >
+                Bekijk planning (Trello)
+              </a>
+            </div>
+          </div>
+
+          <!-- PROJECT 2: SCHOOLPROJECT -->
+          <div class="border border-gray-200 rounded-3xl p-6 bg-white">
+            <h2 class="text-2xl font-semibold">Thuiszorg Management Systeem</h2>
+
+            <p class="mt-3 text-gray-700">
+              Voor een schoolproject ontwikkelde ik een volledige webapplicatie voor de thuiszorg.
+              De applicatie ondersteunt verschillende gebruikersrollen en maakt het mogelijk
+              om cliënten, zorgmomenten, rapportages en metingen overzichtelijk te beheren.
+            </p>
+
+            <ul class="mt-4 list-disc list-inside text-gray-700 space-y-1">
+              <li>Gebruikersrollen: admin, planner en zorgpersoneel</li>
+              <li>Beheer van cliënten en zorgmomenten</li>
+              <li>Registratie van rapportages en medische metingen</li>
+              <li>Autorisatie: gebruikers kunnen alleen hun eigen gegevens bewerken</li>
+              <li>Gebruiksvriendelijke interface met modals en validatie</li>
+            </ul>
+
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Laravel</span>
+              <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">PHP</span>
+              <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">MySQL</span>
+              <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Blade</span>
+              <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Tailwind CSS</span>
+            </div>
+
+            <div class="mt-6 space-y-3">
+              <!-- Demo video -->
+              <div class="flex items-center gap-4">
+                <img
+                  src="./assets/social-care.png"
+                  alt="Thuiszorg webapplicatie"
+                  class="h-12 w-12 rounded-lg border border-gray-200"
+                />
+            
+                <a
+                  href="https://drive.google.com/jouw-demo-video-link"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-900 font-semibold hover:underline hover:text-gray-600"
+                >
+                  Bekijk demo-video
+                </a>
+              </div>
+            
+              <!-- GitHub repo -->
+              <div class="flex items-center gap-4">
+                <img
+                  src="./assets/github.png"
+                  alt="GitHub repository"
+                  class="h-12 w-12 rounded-lg border border-gray-200"
+                />
+            
+                <a
+                  href="https://github.com/osamamohti2002/clienten_dossier.git"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-900 font-semibold hover:underline hover:text-gray-600"
+                >
+                  Bekijk code op GitHub
+                </a>
+              </div>
+              <!-- Trello board -->
+              <div class="flex items-center gap-4">
+                <img
+                  src="./assets/trello.png"
+                  alt="Trello bord"
+                  class="h-12 w-12 rounded-lg border border-gray-200"
+                />
+                <a
+                  href="https://trello.com/b/ufFvvAjd"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-900 font-semibold hover:underline hover:text-gray-600"
+                >
+                Bekijk planning (Trello)
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
+    </section>
 
-      <div class="border rounded-xl p-5">
-        <h2 class="font-semibold">DIVD Academy – Stage</h2>
-        <p class="mt-2 text-black/70 text-sm">Korte omschrijving komt later.</p>
-      </div>
-    </div>
-  </main>
-</body>
+    <footer class="py-10">
+      <p class="text-center text-gray-600">© 2026 Lithe Jnaid. All Rights Reserved.</p>
+    </footer>
+  </body>
 </html>
